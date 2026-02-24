@@ -15,6 +15,7 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
 from diplomacy.utils.export import from_saved_game_format
+import ai_diplomacy
 from ai_diplomacy.clients import OpenAIClient
 from ai_diplomacy.game_history import GameHistory, Phase, Message
 from ai_diplomacy.ndai_server import run_ndai_negotiations
@@ -26,7 +27,7 @@ logger = logging.getLogger("ndai_tinfoil_server")
 NDAI_LLM_BASE_URL = "https://openrouter.ai/api/v1"
 NDAI_LLM_API_KEY = os.getenv("OPENROUTER_API_KEY")
 NDAI_LLM_MODEL = "meta-llama/llama-3.3-70b-instruct"
-DEFAULT_PROMPTS_DIR = os.path.join(os.path.dirname(__file__), "ai_diplomacy", "prompts_simple")
+DEFAULT_PROMPTS_DIR = os.path.join(os.path.dirname(ai_diplomacy.__file__), "prompts_simple")
 
 app = FastAPI(title="NDAI Tinfoil Server")
 
