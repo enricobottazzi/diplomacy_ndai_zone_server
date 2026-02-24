@@ -25,7 +25,7 @@ logger = logging.getLogger("ndai_tinfoil_server")
 
 NDAI_LLM_BASE_URL = "https://openrouter.ai/api/v1"
 NDAI_LLM_API_KEY = os.getenv("OPENROUTER_API_KEY")
-NDAI_LLM_MODEL = "moonshotai/kimi-k2.5"
+NDAI_LLM_MODEL = "meta-llama/llama-3.3-70b-instruct"
 DEFAULT_PROMPTS_DIR = os.path.join(os.path.dirname(__file__), "ai_diplomacy", "prompts_simple")
 
 app = FastAPI(title="NDAI Tinfoil Server")
