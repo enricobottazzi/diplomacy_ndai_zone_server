@@ -13,7 +13,7 @@ resolution-markers = [
 [[package]]
 name = "ai-diplomacy"
 version = "0.1.0"
-source = { git = "https://github.com/enricobottazzi/AI_Diplomacy.git?rev=feat_server#e43a7d85ec5439a69a0854bb89464a65606afa55" }
+source = { git = "https://github.com/enricobottazzi/AI_Diplomacy.git?rev=feat_server#7771ec7459a8259722259182b764fd94638a84b2" }
 dependencies = [
     { name = "anthropic" },
     { name = "bcrypt" },
